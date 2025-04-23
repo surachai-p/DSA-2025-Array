@@ -71,12 +71,18 @@ print("จำนวน 2 ในarray:", numbers.count(2))
    - หาค่าเฉลี่ย
    - หาคะแนนสูงสุดและต่ำสุด
    - แสดงจำนวนคนที่ได้คะแนนมากกว่าค่าเฉลี่ย
+     ![image](https://github.com/user-attachments/assets/ac9ae77f-b3e2-4a35-b34e-62cc8b5bf4b0)
+
+
 
 2. สร้างโปรแกรมจัดการรายชื่อสินค้าในร้านค้า โดยมีฟังก์ชัน:
    - เพิ่มสินค้าใหม่
    - ลบสินค้าที่หมด
    - ค้นหาสินค้า
    - แสดงรายการสินค้าทั้งหมด
+     ![image](https://github.com/user-attachments/assets/c1f9b4ea-f81e-493f-a406-4d875a9e26b6)
+
+
 
 
 ## การทดลองที่ 2: Array 2 มิติ
@@ -147,12 +153,20 @@ for row in matrix:
    - คำนวณคะแนนเฉลี่ยของแต่ละวิชา
    - หานักเรียนที่ได้คะแนนรวมสูงสุด
    - แสดงจำนวนนักเรียนที่สอบผ่านแต่ละวิชา (คะแนนผ่าน ≥ 50)
+     ![image](https://github.com/user-attachments/assets/209d0317-ff26-42f3-9046-3670291a318e)
+
+
 
 2. สร้างโปรแกรมจัดการที่นั่งในโรงภาพยนตร์:
    - แสดงแผนผังที่นั่ง (ว่าง/จอง)
    - จองที่นั่ง
    - ยกเลิกการจอง
    - แสดงจำนวนที่นั่งว่างทั้งหมด
+     ![image](https://github.com/user-attachments/assets/e068be6c-2fac-44c1-bd78-693dd651fd24)
+     ![image](https://github.com/user-attachments/assets/89d6c412-85a5-43de-8f4b-2dd13d4bc314)
+
+
+
 
 
 ## การทดลองที่ 3: Array 3 มิติ
@@ -201,6 +215,10 @@ for layer in cube:
    - เป็นเวลา 7 วัน
    - หาค่าเฉลี่ยอุณหภูมิของแต่ละเมือง
    - หาวันและเวลาที่อุณหภูมิสูงที่สุดของแต่ละเมือง
+     ![image](https://github.com/user-attachments/assets/7efe2664-cc73-4675-ac65-0071f3c1610a)
+     ![image](https://github.com/user-attachments/assets/06f5a14c-2852-4b2f-93f3-06ccffeec7c2)
+
+
 
 2. เขียนโปรแกรมวิเคราะห์ผลการเรียน:
    - เก็บคะแนนของนักเรียน 3 ห้อง
@@ -209,6 +227,12 @@ for layer in cube:
    - หาห้องที่มีคะแนนเฉลี่ยสูงสุด
    - หานักเรียนที่ได้คะแนนรวมสูงสุดในแต่ละห้อง
    - แสดงจำนวนนักเรียนที่สอบผ่านทุกวิชาในแต่ละห้อง
+   ![image](https://github.com/user-attachments/assets/3b7858f5-a516-4f87-81c5-e3fe4c2187ce)
+   ![image](https://github.com/user-attachments/assets/cf9bff2c-1116-4d2c-9f5b-54aa518bf51b)
+   ![image](https://github.com/user-attachments/assets/f6ce10d6-81f8-4862-8159-cc2f562e5d9e)
+
+
+
 
 ## การส่งงาน
 1. ส่งไฟล์ .py ที่มีโค้ดการทดลอง
