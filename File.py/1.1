@@ -1,0 +1,12 @@
+scores = []
+for i in range(5):
+    score = float(input(f"กรุณากรอกคะแนนของนักเรียนคนที่ {i+1}: "))
+    scores.append(score)
+average_score = sum(scores) / len(scores)
+highest_score = max(scores)
+lowest_score = min(scores)
+count_above_average = sum(1 for score in scores if score > average_score)
+print(f"\nค่าเฉลี่ยคะแนน: {average_score:.2f}")
+print(f"คะแนนสูงสุด: {highest_score}")
+print(f"คะแนนต่ำสุด: {lowest_score}")
+print(f"จำนวนคนที่ได้คะแนนมากกว่าค่าเฉลี่ย: {count_above_average} คน")

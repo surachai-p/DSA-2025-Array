@@ -1,0 +1,52 @@
+rows = 5  
+cols = 5  
+seats = [["ว่าง" for _ in range(cols)] for _ in range(rows)] 
+    print("\nแผนผังที่นั่ง:")
+    for i in range(rows):
+        print(" ".join(seats[i]))
+def book_seat():
+    show_seats()
+    row = int(input("\nกรุณากรอกหมายเลขแถวที่ต้องการจอง (1-5): ")) - 1
+    col = int(input("กรุณากรอกหมายเลขคอลัมน์ที่ต้องการจอง (1-5): ")) - 1
+    if seats[row][col] == "ว่าง":
+        seats[row][col] = "จอง"
+        print(f"จองที่นั่งแถว {row+1} คอลัมน์ {col+1} เรียบร้อยแล้ว")
+    else:
+        print("ที่นั่งนี้ถูกจองแล้ว")
+def cancel_booking():
+    show_seats()
+    row = int(input("\nกรุณากรอกหมายเลขแถวที่ต้องการยกเลิกการจอง (1-5): ")) - 1
+    col = int(input("กรุณากรอกหมายเลขคอลัมน์ที่ต้องการยกเลิกการจอง (1-5): ")) - 1
+    if seats[row][col] == "จอง":
+        seats[row][col] = "ว่าง"
+        print(f"ยกเลิกการจองที่นั่งแถว {row+1} คอลัมน์ {col+1} เรียบร้อยแล้ว")
+    else:
+        print("ที่นั่งนี้ยังไม่ได้จอง")
+def show_available_seats():
+    available = sum(row.count("ว่าง") for row in seats)
+    print(f"\nจำนวนที่นั่งว่างทั้งหมด: {available} ที่นั่ง")
+def menu():
+    while True:
+        print("\nเมนูจัดการที่นั่งโรงภาพยนตร์:")
+        print("1. แสดงแผนผังที่นั่ง")
+        print("2. จองที่นั่ง")
+        print("3. ยกเลิกการจอง")
+        print("4. แสดงจำนวนที่นั่งว่างทั้งหมด")
+        print("5. ออกจากโปรแกรม")
+        
+        choice = input("กรุณาเลือกหมายเลขที่ต้องการ (1-5): ")
+        
+        if choice == "1":
+            show_seats()
+        elif choice == "2":
+            book_seat()
+        elif choice == "3":
+            cancel_booking()
+        elif choice == "4":
+            show_available_seats()
+        elif choice == "5":
+            print("ออกจากโปรแกรม")
+            break
+        else:
+            print("โปรดเลือกหมายเลขที่ถูกต้อง (1-5)")
+menu()

@@ -1,0 +1,41 @@
+def calculate_average_temperature(city_data):
+    total = sum(sum(day) for day in city_data) 
+    total_readings = len(city_data) * len(city_data[0])  
+    return total / total_readings
+def find_highest_temperature_day_time(city_data):
+    highest_temp = float('-inf')
+    highest_day = -1
+    highest_time = -1
+    
+    for day in range(len(city_data)): 
+        for time in range(len(city_data[day])): 
+            if city_data[day][time] > highest_temp:
+                highest_temp = city_data[day][time]
+                highest_day = day + 1
+                highest_time = time + 1  
+                
+    return highest_temp, highest_day, highest_time
+cities = {}
+num_cities = 3  
+for _ in range(num_cities):
+    city_name = input("\nกรุณากรอกชื่อเมือง: ")
+    city_data = []
+    print(f"กรุณากรอกข้อมูลอุณหภูมิสำหรับเมือง {city_name}:")
+    for day in range(7):
+        daily_readings = []
+        print(f"วันที่ {day + 1}:")
+        for time in range(4):  
+            temp = float(input(f"กรุณากรอกอุณหภูมิ (ครั้งที่ {time + 1}): "))
+            daily_readings.append(temp)
+        city_data.append(daily_readings)
+    
+    cities[city_name] = city_data
+
+for city_name, city_data in cities.items():
+    avg_temp = calculate_average_temperature(city_data)
+    print(f"\nค่าเฉลี่ยอุณหภูมิของเมือง {city_name}: {avg_temp:.2f}°C")
+
+for city_name, city_data in cities.items():
+    highest_temp, highest_day, highest_time = find_highest_temperature_day_time(city_data)
+    print(f"\nสำหรับเมือง {city_name}:")
+    print(f"อุณหภูมิสูงที่สุด: {highest_temp}°C ในวันที่ {highest_day} เวลา {highest_time}")

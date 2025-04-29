@@ -1,0 +1,53 @@
+inventory = []
+def add_product():
+    name = input("กรุณากรอกชื่อสินค้าที่จะเพิ่ม: ")
+    quantity = int(input("กรุณากรอกจำนวนสินค้าที่จะเพิ่ม: "))
+    inventory.append({"name": name, "quantity": quantity})
+    print(f"เพิ่มสินค้า {name} จำนวน {quantity} ชิ้นเรียบร้อยแล้ว")
+def remove_out_of_stock():
+    name = input("กรุณากรอกชื่อสินค้าที่ต้องการลบ: ")
+    for product in inventory:
+        if product["name"] == name and product["quantity"] == 0:
+            inventory.remove(product)
+            print(f"ลบสินค้า {name} ที่หมดแล้วเรียบร้อย")
+            return
+    print("ไม่พบสินค้าที่หมดหรือสินค้ามีจำนวนมากกว่า 0")
+def search_product():
+    name = input("กรุณากรอกชื่อสินค้าที่ต้องการค้นหา: ")
+    for product in inventory:
+        if product["name"].lower() == name.lower():
+            print(f"พบสินค้า: {product['name']} จำนวน {product['quantity']} ชิ้น")
+            return
+    print("ไม่พบสินค้าดังกล่าวในรายการ")
+def show_inventory():
+    if len(inventory) == 0:
+        print("ยังไม่มีสินค้าที่บันทึกไว้ในร้าน")
+    else:
+        print("รายการสินค้าทั้งหมด:")
+        for product in inventory:
+            print(f"{product['name']} จำนวน {product['quantity']} ชิ้น")
+def menu():
+    while True:
+        print("\nเมนูหลัก:")
+        print("1. เพิ่มสินค้าใหม่")
+        print("2. ลบสินค้าที่หมด")
+        print("3. ค้นหาสินค้า")
+        print("4. แสดงรายการสินค้าทั้งหมด")
+        print("5. ออกจากโปรแกรม")
+        
+        choice = input("กรุณาเลือกหมายเลขที่ต้องการ (1-5): ")
+        
+        if choice == "1":
+            add_product()
+        elif choice == "2":
+            remove_out_of_stock()
+        elif choice == "3":
+            search_product()
+        elif choice == "4":
+            show_inventory()
+        elif choice == "5":
+            print("ออกจากโปรแกรม")
+            break
+        else:
+            print("โปรดเลือกหมายเลขที่ถูกต้อง (1-5)")
+menu()

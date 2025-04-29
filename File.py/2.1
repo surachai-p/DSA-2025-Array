@@ -1,0 +1,44 @@
+def calculate_average(scores, subject):
+    total = sum(student[subject] for student in scores)
+    average = total / len(scores)
+    return average
+def find_top_student(scores):
+    highest_total = 0
+    top_student = ""
+    for student in scores:
+        total_score = student["thai"] + student["math"] + student["science"]
+        if total_score > highest_total:
+            highest_total = total_score
+            top_student = student["name"]
+    return top_student, highest_total
+def count_passed_students(scores, subject):
+    passed_count = sum(1 for student in scores if student[subject] >= 50)
+    return passed_count
+students_scores = []
+for i in range(4):
+    name = input(f"กรุณากรอกชื่อของนักเรียนคนที่ {i+1}: ")
+    thai = float(input(f"กรุณากรอกคะแนนวิชาภาษาไทยของ {name}: "))
+    math = float(input(f"กรุณากรอกคะแนนวิชาคณิตศาสตร์ของ {name}: "))
+    science = float(input(f"กรุณากรอกคะแนนวิชาวิทยาศาสตร์ของ {name}: "))
+    
+    students_scores.append({"name": name, "thai": thai, "math": math, "science": science})
+
+thai_avg = calculate_average(students_scores, "thai")
+math_avg = calculate_average(students_scores, "math")
+science_avg = calculate_average(students_scores, "science")
+
+top_student, highest_total = find_top_student(students_scores)
+
+passed_thai = count_passed_students(students_scores, "thai")
+passed_math = count_passed_students(students_scores, "math")
+passed_science = count_passed_students(students_scores, "science")
+print(f"\nคะแนนเฉลี่ยของวิชาภาษาไทย: {thai_avg:.2f}")
+print(f"คะแนนเฉลี่ยของวิชาคณิตศาสตร์: {math_avg:.2f}")
+print(f"คะแนนเฉลี่ยของวิชาวิทยาศาสตร์: {science_avg:.2f}")
+
+print(f"\nนักเรียนที่ได้คะแนนรวมสูงสุด: {top_student} ({highest_total} คะแนนรวม)")
+
+print(f"\nจำนวนนักเรียนที่สอบผ่านแต่ละวิชา:")
+print(f"ภาษาไทย: {passed_thai} คน")
+print(f"คณิตศาสตร์: {passed_math} คน")
+print(f"วิทยาศาสตร์: {passed_science} คน")
