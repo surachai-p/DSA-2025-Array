@@ -72,11 +72,27 @@ print("จำนวน 2 ในarray:", numbers.count(2))
    - หาคะแนนสูงสุดและต่ำสุด
    - แสดงจำนวนคนที่ได้คะแนนมากกว่าค่าเฉลี่ย
 
+โค้ด
+
+![image](https://github.com/user-attachments/assets/6e6af862-d941-4179-8d23-c221b7a0f437)
+
+ผลการทำงาน
+
+![image](https://github.com/user-attachments/assets/eed93235-b530-4652-ab6a-36b80b2a35e8)
+
 2. สร้างโปรแกรมจัดการรายชื่อสินค้าในร้านค้า โดยมีฟังก์ชัน:
    - เพิ่มสินค้าใหม่
    - ลบสินค้าที่หมด
    - ค้นหาสินค้า
    - แสดงรายการสินค้าทั้งหมด
+   
+โค้ด
+
+![image](https://github.com/user-attachments/assets/bf0578e6-faef-4f8f-b77a-aad8953b281f)
+
+ผลการทำงาน
+
+![image](https://github.com/user-attachments/assets/0716b290-19b8-4c39-b6da-3cc212c2cfa0)
 
 
 ## การทดลองที่ 2: Array 2 มิติ
@@ -148,11 +164,29 @@ for row in matrix:
    - หานักเรียนที่ได้คะแนนรวมสูงสุด
    - แสดงจำนวนนักเรียนที่สอบผ่านแต่ละวิชา (คะแนนผ่าน ≥ 50)
 
+โค้ด
+
+![image](https://github.com/user-attachments/assets/1f4a0d0f-7f4a-4828-bb4a-757bb1b6f5c0)
+
+ผลการทำงาน
+
+![image](https://github.com/user-attachments/assets/6dbad63a-19a9-45cf-8fc5-3af6f923f583)
+
+
 2. สร้างโปรแกรมจัดการที่นั่งในโรงภาพยนตร์:
    - แสดงแผนผังที่นั่ง (ว่าง/จอง)
    - จองที่นั่ง
    - ยกเลิกการจอง
    - แสดงจำนวนที่นั่งว่างทั้งหมด
+
+โค้ด
+
+![image](https://github.com/user-attachments/assets/bdfcf3b9-b715-4ce1-8920-0c5db5c06895)
+
+ผลการทำงาน
+
+![image](https://github.com/user-attachments/assets/0198cfde-11cf-4cf4-9e6a-d539208b2e6a)
+![image](https://github.com/user-attachments/assets/ed408d46-774e-42b7-ae3a-97116c85401d)
 
 
 ## การทดลองที่ 3: Array 3 มิติ
@@ -202,6 +236,15 @@ for layer in cube:
    - หาค่าเฉลี่ยอุณหภูมิของแต่ละเมือง
    - หาวันและเวลาที่อุณหภูมิสูงที่สุดของแต่ละเมือง
 
+โค้ด
+![image](https://github.com/user-attachments/assets/4e362bad-86e9-4727-8933-e6f06123171a)
+
+ผลการทำงาน
+
+![image](https://github.com/user-attachments/assets/7ac3260b-dbe1-417c-b97d-e3ab1ce5039d)
+![image](https://github.com/user-attachments/assets/1e57c4ca-ba26-4d9b-a023-5a8ca8e73085)
+![image](https://github.com/user-attachments/assets/cf6919c9-5181-4155-ac6b-13ef9a8ee866)
+
 2. เขียนโปรแกรมวิเคราะห์ผลการเรียน:
    - เก็บคะแนนของนักเรียน 3 ห้อง
    - ห้องละ 5 คน
@@ -209,6 +252,16 @@ for layer in cube:
    - หาห้องที่มีคะแนนเฉลี่ยสูงสุด
    - หานักเรียนที่ได้คะแนนรวมสูงสุดในแต่ละห้อง
    - แสดงจำนวนนักเรียนที่สอบผ่านทุกวิชาในแต่ละห้อง
+
+โค้ด
+
+![image](https://github.com/user-attachments/assets/39f61e93-1bcb-41d4-9075-33013c31f4e1)
+
+ผลการทำงาน
+
+![image](https://github.com/user-attachments/assets/f4e6c600-865a-43bc-864d-aa196a26842a)
+![image](https://github.com/user-attachments/assets/74e1f2fb-0925-4e11-8630-c7b1be76e443)
+
 
 ## การส่งงาน
 1. ส่งไฟล์ .py ที่มีโค้ดการทดลอง

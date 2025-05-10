@@ -1,0 +1,36 @@
+# รายการสินค้า (เก็บเป็น dict)
+products = {}
+
+# ฟังก์ชันจัดการสินค้า
+def manage_products(action):
+    if action == "add":
+        name = input("\nชื่อสินค้า: ").strip()
+        try:
+            qty = int(input("จำนวนสินค้า: "))
+            if qty >= 0:
+                products[name] = qty
+                print(f"เพิ่มสินค้า '{name}' จำนวน {qty} ชิ้นเรียบร้อย!")
+            else:
+                print("** จำนวนสินค้าต้องไม่เป็นค่าลบ **")
+        except ValueError:
+            print("** กรุณากรอกจำนวนสินค้าเป็นตัวเลข **")
+    elif action == "remove":
+        removed = [name for name, qty in products.items() if qty == 0]
+        for name in removed: del products[name]
+        print("ลบสินค้าเรียบร้อย!" if removed else "ไม่มีสินค้าที่หมดในระบบ")
+    elif action == "search":
+        name = input("\nชื่อสินค้าที่ต้องการค้นหา: ").strip()
+        print(f"สินค้า '{name}' มีจำนวน {products.get(name, 'ไม่พบ')} ชิ้น")
+    elif action == "display":
+        print("\n=== รายการสินค้าทั้งหมด ===")
+        [print(f"- {name}: {qty} ชิ้น") for name, qty in products.items()] if products else print("ไม่มีสินค้าในระบบ")
+
+# เมนูหลัก
+def main():
+    actions = {"1": "add", "2": "remove", "3": "search", "4": "display"}
+    while (choice := input("\n1. เพิ่ม 2. ลบ 3. ค้นหา 4. แสดง 5. ออก: ")) != "5":
+        manage_products(actions.get(choice, None)) if choice in actions else print("** เลือกไม่ถูกต้อง **")
+    print("ออกจากโปรแกรม...")
+
+if __name__ == "__main__":
+    main()

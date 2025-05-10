@@ -1,0 +1,20 @@
+# เก็บข้อมูลคะแนน [ห้อง][นักเรียน][วิชา]
+subjects = ["คณิตศาสตร์", "ภาษาไทย", "ภาษาอังกฤษ", "สังคม"]
+scores = [[[int(input(f"ห้อง {r+1}, นักเรียน {s+1}, วิชา {subjects[subj]} คะแนน: ")) 
+           for subj in range(4)] for s in range(5)] for r in range(3)]
+
+# หาคะแนนเฉลี่ยสูงสุด
+highest_avg_room = max(range(3), key=lambda r: sum(sum(scores[r][s]) for s in range(5)) / 20) + 1
+print(f"\nห้องที่มีคะแนนเฉลี่ยสูงสุด: ห้อง {highest_avg_room}")
+
+# หานักเรียนที่ได้คะแนนรวมสูงสุด
+print("\nหานักเรียนที่ได้คะแนนรวมสูงสุดในแต่ละห้อง:")
+for r in range(3):
+    top_student = max(range(5), key=lambda s: sum(scores[r][s]))
+    print(f"ห้อง {r+1}: นักเรียนคนที่ {top_student+1} (คะแนนรวม {sum(scores[r][top_student])})")
+
+# แสดงจำนวนนักเรียนที่ผ่านทุกวิชา (≥ 50) ในแต่ละห้อง
+print("\nจำนวนนักเรียนที่ผ่านทุกวิชาในแต่ละห้อง:")
+for r in range(3):
+    count = sum(all(score >= 50 for score in scores[r][s]) for s in range(5))
+    print(f"ห้อง {r+1}: {count} คน")

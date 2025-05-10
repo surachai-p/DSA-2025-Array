@@ -1,0 +1,25 @@
+students = {}
+subjects = ["วิชาภาษาไทย", "วิชาคณิตศาสตร์", "วิชาภาษาอังกฤษ"]
+
+def add_scores():
+    for i in range(1, 5):
+        students[f"นักเรียน {i}"] = [int(input(f"นักเรียน {i}, {subj}: ")) for subj in subjects]
+
+def calculate_averages():
+    print("\nคะแนนเฉลี่ย:", {subjects[i]: sum(scores[i] for scores in students.values()) / len(students) for i in range(len(subjects))})
+
+def find_highest_scorer():
+    top_student = max(students, key=lambda x: sum(students[x]))
+    print(f"\nคะแนนรวมสูงสุด: {top_student} ({sum(students[top_student])} คะแนน)")
+
+def count_pass_students():
+    print("\nสอบผ่าน:", {subjects[i]: sum(scores[i] >= 50 for scores in students.values()) for i in range(len(subjects))})
+
+def main():
+    add_scores()
+    calculate_averages()
+    find_highest_scorer()
+    count_pass_students()
+
+if __name__ == "__main__":
+    main()

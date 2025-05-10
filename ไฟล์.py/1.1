@@ -1,0 +1,3 @@
+scores = [float(input(f"คะแนนของนักเรียนคนที่ {i + 1}: ")) for i in range(5)]
+average = sum(scores) / len(scores)
+print(f"\nผลลัพธ์:\nคะแนนเฉลี่ย: {average:.2f}\nคะแนนสูงสุด: {max(scores)}\nคะแนนต่ำสุด: {min(scores)}\nจำนวนคนที่ได้คะแนนมากกว่าค่าเฉลี่ย: {sum(s > average for s in scores)}")

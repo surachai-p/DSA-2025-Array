@@ -1,0 +1,34 @@
+# แผนผังที่นั่ง (5x5)
+seats = [["ว่าง"] * 5 for _ in range(5)]
+
+# ฟังก์ชันจัดการที่นั่ง
+def manage_seats(action):
+    if action == "display":
+        print("\n=== แผนผังที่นั่ง ===")
+        for row in seats: print(" ".join([f"[{seat}]" for seat in row]))
+    elif action in {"book", "cancel"}:
+        row, col = map(int, input("\nระบุที่นั่ง (แถว, คอลัมน์): ").split(","))
+        current = seats[row - 1][col - 1]
+        if action == "book" and current == "ว่าง":
+            seats[row - 1][col - 1] = "จอง"
+            print(f"จองที่นั่ง ({row},{col}) เรียบร้อย!")
+        elif action == "cancel" and current == "จอง":
+            seats[row - 1][col - 1] = "ว่าง"
+            print(f"ยกเลิกการจองที่นั่ง ({row},{col}) เรียบร้อย!")
+        else:
+            print(f"ที่นั่ง ({row},{col}) ไม่สามารถดำเนินการได้")
+    elif action == "count":
+        print(f"\nจำนวนที่นั่งว่างทั้งหมด: {sum(row.count('ว่าง') for row in seats)} ที่นั่ง")
+
+# เมนูหลัก
+def main():
+    actions = {"1": "display", "2": "book", "3": "cancel", "4": "count"}
+    while True:
+        print("\n=== เมนู ===\n1. แสดงแผนผัง\n2. จองที่นั่ง\n3. ยกเลิกการจอง\n4. แสดงจำนวนที่นั่งว่าง\n5. ออก")
+        choice = input("เลือกเมนู (1-5): ")
+        if choice == "5": break
+        elif choice in actions: manage_seats(actions[choice])
+        else: print("** กรุณาเลือกตัวเลือกที่ถูกต้อง **")
+
+if __name__ == "__main__":
+    main()

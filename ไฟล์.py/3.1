@@ -1,0 +1,14 @@
+# ข้อมูลอุณหภูมิ [เมือง][วัน][เวลา]
+cities = ["A", "B", "C"]
+times = ["05.00 น.", "12.00 น.", "17.00 น.", "23.00 น."]
+temps = [[[float(input(f"เมือง {cities[c]}, วันที่ {d+1}, เวลา {times[t]} (°C): ")) 
+           for t in range(4)] for d in range(7)] for c in range(3)]
+
+# คำนวณและแสดงผล
+def summarize():
+    for c in range(3):
+        avg_temp = sum(sum(day) for day in temps[c]) / 28
+        max_temp, max_day, max_time = max((temps[c][d][t], d + 1, times[t]) for d in range(7) for t in range(4))
+        print(f"\nเมือง {cities[c]}: เฉลี่ย {avg_temp:.2f} °C, สูงสุด {max_temp:.2f} °C (วัน {max_day}, เวลา {max_time})")
+
+summarize()
