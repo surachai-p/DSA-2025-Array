@@ -71,12 +71,17 @@ print("จำนวน 2 ในarray:", numbers.count(2))
    - หาค่าเฉลี่ย
    - หาคะแนนสูงสุดและต่ำสุด
    - แสดงจำนวนคนที่ได้คะแนนมากกว่าค่าเฉลี่ย
+   ![image](https://github.com/user-attachments/assets/674c73ef-7a45-4d90-949a-595f3c39860e)
+
 
 2. สร้างโปรแกรมจัดการรายชื่อสินค้าในร้านค้า โดยมีฟังก์ชัน:
    - เพิ่มสินค้าใหม่
    - ลบสินค้าที่หมด
    - ค้นหาสินค้า
    - แสดงรายการสินค้าทั้งหมด
+   ![image](https://github.com/user-attachments/assets/9514ffa6-e117-444d-bd25-226640bbf71a)
+   ![image](https://github.com/user-attachments/assets/0a18c29d-3a5a-4da6-aabd-a2e4ef6085b1)
+
 
 
 ## การทดลองที่ 2: Array 2 มิติ
@@ -147,12 +152,17 @@ for row in matrix:
    - คำนวณคะแนนเฉลี่ยของแต่ละวิชา
    - หานักเรียนที่ได้คะแนนรวมสูงสุด
    - แสดงจำนวนนักเรียนที่สอบผ่านแต่ละวิชา (คะแนนผ่าน ≥ 50)
+![image](https://github.com/user-attachments/assets/d6969f86-eb5d-4664-837f-92e7d419d657)
 
 2. สร้างโปรแกรมจัดการที่นั่งในโรงภาพยนตร์:
    - แสดงแผนผังที่นั่ง (ว่าง/จอง)
    - จองที่นั่ง
    - ยกเลิกการจอง
    - แสดงจำนวนที่นั่งว่างทั้งหมด
+   ![image](https://github.com/user-attachments/assets/3730d973-83e9-47a6-acf3-7178b5a47104)
+
+   ![image](https://github.com/user-attachments/assets/0891bfcc-c8a6-4e99-9740-fabfbba0aaf1)
+
 
 
 ## การทดลองที่ 3: Array 3 มิติ
@@ -201,6 +211,10 @@ for layer in cube:
    - เป็นเวลา 7 วัน
    - หาค่าเฉลี่ยอุณหภูมิของแต่ละเมือง
    - หาวันและเวลาที่อุณหภูมิสูงที่สุดของแต่ละเมือง
+   ![image](https://github.com/user-attachments/assets/d55046fc-5b5f-405f-acd3-6bd5d02ad67e)
+   ![image](https://github.com/user-attachments/assets/febf084a-0584-451c-9c69-1cdf42dbd877)
+
+
 
 2. เขียนโปรแกรมวิเคราะห์ผลการเรียน:
    - เก็บคะแนนของนักเรียน 3 ห้อง
@@ -209,6 +223,9 @@ for layer in cube:
    - หาห้องที่มีคะแนนเฉลี่ยสูงสุด
    - หานักเรียนที่ได้คะแนนรวมสูงสุดในแต่ละห้อง
    - แสดงจำนวนนักเรียนที่สอบผ่านทุกวิชาในแต่ละห้อง
+   ![image](https://github.com/user-attachments/assets/5c9b7fa2-1970-4aa2-bfaf-19b817b0a968)
+   ![image](https://github.com/user-attachments/assets/0a474b47-9fb1-495b-bccb-8898a98b2fd8)
+
 
 ## การส่งงาน
 1. ส่งไฟล์ .py ที่มีโค้ดการทดลอง
